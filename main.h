@@ -7,6 +7,7 @@
 #include <string.h>
 #include <errno.h>
 #include <stdbool.h>
+# include <stdio.h>
 
 #define MAX_ALIASES 100
 /**
@@ -26,7 +27,7 @@ struct Alias aliases[MAX_ALIASES];
 void printAliases(void);
 void defineAlias(char *name, char *value);
 void processAliasCommand(char *command);
-void executechar(char *command, char **args, char *path);
+void executeCommand(char *command, char **args, char *path);
 char *customGetline();
 int setenvironment(char **args);
 int unsetenvironment(char **args);
